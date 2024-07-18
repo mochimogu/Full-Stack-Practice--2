@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block content %}
+
+    <div class="d-flex justify-content-around m-4">
+        {% for items in data %}
+        <div class="card shadow rounded" style="width: 18rem; height: 25rem">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{items.title}}</h5>
+              <a href="#" class="btn btn-primary">Read More...</a>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
