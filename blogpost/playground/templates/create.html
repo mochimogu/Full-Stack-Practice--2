@@ -4,14 +4,15 @@
     <div class="container mt-3">
         <form method="POST" action="/playground/createBlogs/">
             {% csrf_token %}
-            <div class="mb-3">
+            {% comment %} <div class="mb-3">
                 <label for="title" class="form-label">Title of the Blog</label>
                 <input type="text" class="form-control" id="title" aria-describedby="titleBlog" required>
             </div>
             <div class="mb-3">
                 <label for="blog" class="form-label">Blog</label>
                 <input type="text" class="form-control" id="blog">
-            </div>
+            </div> {% endcomment %}
+            {{ form }}
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

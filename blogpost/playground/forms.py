@@ -1,7 +1,10 @@
 from django import forms
+from . import models
 
+class BlogForm(forms.ModelForm):
+    class Meta:
+        model = models.BlogPost
+        fields = ['title', 'blog']
 
-
-class BlogForm(forms.Form):
-    title = forms.CharField(max_length=20)
-    blog = forms.CharField(widget=forms.Textarea)
+class SearchForm(forms.Form):
+    query = forms.CharField(label="Search", max_length=50)
